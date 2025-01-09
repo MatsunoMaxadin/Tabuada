@@ -8,8 +8,8 @@
 </head>
 <body>
   
-  <h1> Quer tabuada de quanto porra?????</h1>
-  <input type="number"id="vadia"> 
+  <h1> Quer tabuada de quanto???</h1>
+  <input type="number"id="num"> 
   
   <div id="tabuada"> </div>
   
@@ -18,20 +18,16 @@
   let tabuada = document.getElementById("tabuada");
   
   const cauculo = () => {
-    let vadia = document.getElementById("vadia");
-    let valor = Number(vadia.value);
-    let laele = valor === 4? 'laele' : ' ';
+    let num = document.getElementById("num");
+    let valor = Number(num.value);
+    
         
-    if (valor === 69){
-      
-      laele = 'SEXOOO';
-      
-    }
-    tabuada.innerHTML = `<p> ESSA É A TABUADA DE ${valor} ${laele}</p>`;
+    
+    tabuada.innerHTML = `<p> ESSA É A TABUADA DE ${valor}</p>`;
     
     if (valor === 0) {
       
-      tabuada.innerHTML = '<p>0 NÃO TEM TABUADA SEU BURRO</p>'
+      tabuada.innerHTML = '<p>0 NÃO TEM TABUADA</p>'
       return
     }
     
@@ -49,7 +45,7 @@
   };
   
   
-  vadia.addEventListener('input', cauculo);
+  num.addEventListener('input', cauculo);
   
   
   
