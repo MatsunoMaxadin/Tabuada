@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <link rel="stylesheet" href="styles/style.css"/>
+  <title>Hello, World!</title>
+</head>
+<body>
+  
+  <h1> Quer tabuada de quanto porra?????</h1>
+  <input type="number"id="vadia"> 
+  
+  <div id="tabuada"> </div>
+  
+  <script>
+  
+  let tabuada = document.getElementById("tabuada");
+  
+  const cauculo = () => {
+    let vadia = document.getElementById("vadia");
+    let valor = Number(vadia.value);
+    let laele = valor === 4? 'laele' : ' ';
+        
+    if (valor === 69){
+      
+      laele = 'SEXOOO';
+      
+    }
+    tabuada.innerHTML = `<p> ESSA É A TABUADA DE ${valor} ${laele}</p>`;
+    
+    if (valor === 0) {
+      
+      tabuada.innerHTML = '<p>0 NÃO TEM TABUADA SEU BURRO</p>'
+      return
+    }
+    
+    
+    for(i = 1; i <= 10; i++) {
+      
+      tabuada.innerHTML += `<p>${valor} X ${i} = ${valor *  i}</p>`;
+      
+      
+    };
+      
+      
+    
+    
+  };
+  
+  
+  vadia.addEventListener('input', cauculo);
+  
+  
+  
+  </script>
+</body>
+</html>
